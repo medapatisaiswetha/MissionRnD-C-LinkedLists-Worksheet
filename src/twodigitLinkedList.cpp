@@ -15,12 +15,27 @@ NOTES: Only Postive Numbers
 #include <stdio.h>
 #include <malloc.h>
 
-struct node {
+struct node
+{
 	int digit1;
 	int digit2;
 	struct node *next;
 };
 
-int convert_sll_2digit_to_int(struct node *head){
-	return 0;
+int convert_sll_2digit_to_int(struct node *head)
+{
+	struct node *temp;
+	int num=0,n1=0,n2=0,x=0;
+	temp = head;
+	while (temp !=NULL)
+	{
+		{
+			n1 = temp->digit1;
+			n2 = temp->digit2;
+			x = (n1 * 10) + n2;
+			num = (num * 100) + x;
+		}
+		temp = temp->next;
+	}
+	return num;
 }

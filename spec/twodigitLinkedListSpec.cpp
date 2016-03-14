@@ -36,8 +36,8 @@ namespace spec
 			int num = 0;
 			struct node *head = NULL;
 			add(&head, 1,2);
-			add(&head, 5,6);
-			add(&head, 3,4);
+			add(&head,5,6);
+			add(&head,3,4);
 			num = convert_sll_2digit_to_int(head);
 			Assert::IsTrue(num==125634, L"Failed for input 125634.", LINE_INFO());
 		}
